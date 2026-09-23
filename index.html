@@ -351,7 +351,7 @@ html:not([data-host="on"]) .host-note{display:none}
 .rchip{font:600 11px/1 var(--body);letter-spacing:.06em;padding:6px 8px;border-radius:2px;background:var(--accent-soft);color:var(--accent);border:0;cursor:pointer}
 @media (max-width:1000px){.tgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:560px){.tgrid{grid-template-columns:minmax(0,1fr)}}
-.hw{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:28px;align-items:start}
+.hw{display:grid;grid-template-columns:minmax(0,1fr);max-width:860px;gap:28px;align-items:start}
 @media (max-width:980px){.hw{grid-template-columns:minmax(0,1fr)}}
 .focus{display:grid;gap:22px}
 .focus h3{font:300 26px/1.15 var(--display)}
@@ -385,7 +385,7 @@ footer a{color:#dfe6ff}
       <a href="#ladder">Лестница</a>
       <a href="#pitfalls">Подводные камни</a>
       <a href="#practicum">Практикум</a>
-      <a href="#homework">Домашка</a>
+      <a href="#homework">Карточка агента</a>
     </nav>
     <button class="host-toggle" id="host-toggle" type="button" aria-pressed="false"><span class="txt">Режим ведущего</span><span class="sw" aria-hidden="true"></span></button>
   </div>
@@ -430,7 +430,7 @@ footer a{color:#dfe6ff}
       <article class="card nitem"><span class="label">16 сентября · Salesforce</span><h3>AIforce: CRM открывается внешним агентам</h3><p>Данные, процессы и правила Salesforce доступны агентам в других интерфейсах. Параллельно с Anthropic запущен Claudeforce — Salesforce внутри Claude.</p><a href="https://www.salesforce.com/news/press-releases/2026/08/26/salesforce-and-anthropic-announce-claudeforce/" target="_blank" rel="noopener">Salesforce →</a></article>
       <article class="card nitem"><span class="label">30 сентября · Docusign</span><h3>MCP-сервер открыт для всех агентов</h3><p>Подписание договоров становится инструментом, который агент может вызвать сам. MCP — тот самый стандарт из раздела про Tools.</p><a href="https://aiagentstore.ai/ai-agent-news/2026-september" target="_blank" rel="noopener">AI Agent Store →</a></article>
       <article class="card nitem"><span class="label">18 сентября · Anthropic</span><h3>Claude помогает строить следующую версию себя</h3><p>По словам компании, к августу Claude вёл около четверти исследовательской работы — в феврале такой доли не было вовсе.</p><a href="https://spectrumlocalnews.com/us/snplus/business/2026/09/18/anthropic-claude-helping-to-build-next-version" target="_blank" rel="noopener">Spectrum News →</a></article>
-      <article class="card nitem"><span class="label">Сентябрь · Manus и OpenClaw</span><h3>Десктоп-агенты: гонка и шишки</h3><p>Manus выпустил «My Computer» — агента, работающего на вашем компьютере. OpenClaw выпустил три релиза за пять дней, почти все — про безопасность и защиту доступов.</p><a href="https://blog.mean.ceo/openclaw-news-september-2026/" target="_blank" rel="noopener">Mean CEO →</a></article>
+      <article class="card nitem"><span class="label">Сентябрь · Manus и OpenClaw</span><h3>Десктоп-агенты: гонка и безопасность</h3><p>Manus выпустил «My Computer» — агента, работающего на вашем компьютере. OpenClaw выпустил три релиза за пять дней, почти все — про безопасность и защиту доступов.</p><a href="https://blog.mean.ceo/openclaw-news-september-2026/" target="_blank" rel="noopener">Mean CEO →</a></article>
       <article class="card nitem"><span class="label">22 сентября · исследование</span><h3>Агентов много, контроля мало</h3><p>96% организаций уже держат агентов в продакшене, но у двух третей за год были операционные последствия из-за действий агента.</p><a href="https://www.globenewswire.com/news-release/2026/09/22/3366611/0/en/the-ai-agent-management-gap-is-growing.html" target="_blank" rel="noopener">GlobeNewswire →</a></article>
     </div>
   </div>
@@ -579,7 +579,7 @@ footer a{color:#dfe6ff}
         <h3>Непредсказуемо</h3>
         <ul>
           <li>Сработало один раз — не факт, что сработает в следующий: LLM недетерминирована</li>
-          <li>Для повторяющихся задач это проблема: если статус-отчёт каждый понедельник выглядит по-разному, руководство будет не очень довольно</li>
+          <li>Для повторяющихся задач это проблема: если еженедельный отчёт каждый раз выглядит по-разному, его невозможно сравнивать неделя к неделе</li>
           <li><b>Как сделать результат предсказуемым → Skills (ступень 5)</b></li>
         </ul>
       </div>
@@ -676,7 +676,7 @@ footer a{color:#dfe6ff}
           <div class="prompt"><div class="prompt-head"><span>Промпт</span><button class="copy" type="button" data-copy="researcher">Скопировать</button></div><pre data-prompt="researcher"></pre></div></div></li>
         <li><div class="step-top"><input class="chk" type="checkbox" id="s2-3" aria-label="Шаг выполнен"><span class="sn"></span><h4>Следите за петлёй</h4></div>
           <div class="step-body"><p>Агент работает 5–15 минут. Смотрите на ход работы: план → поиск → чтение → «по ценам мало данных» → новый запрос. Всё это же записывается в <span class="path">журнал.md</span>.</p>
-          <div class="checkpoint"><span class="cp">Чекпоинт</span><span>В журнале не меньше 8 шагов и хотя бы одна переформулировка. Найдите её и напишите в чат: какой был первый запрос, какой второй, что сработало.</span></div>
+          <div class="checkpoint"><span class="cp">Чекпоинт</span><span>В журнале не меньше 8 шагов и хотя бы одна переформулировка. Найдите её: какой был первый запрос, какой второй, что сработало.</span></div>
           <div class="host-note"><span class="label">Для ведущего</span>Покажите момент переформулировки в журнале — это и есть петля. Спросите группу: сколько раз за неделю вы сами переспрашиваете модель «а поищи ещё»? Это та же петля, только её крутите вы.</div></div></li>
         <li><div class="step-top"><input class="chk" type="checkbox" id="s2-4" aria-label="Шаг выполнен"><span class="sn"></span><h4>Проверьте результат</h4></div>
           <div class="step-body"><ul class="clean"><li>Откройте три случайные ссылки из досье: совпадают ли факты с источником?</li><li>Есть ли раздел «Чего не удалось найти»? Хорошо, если есть: честный пробел лучше выдумки</li><li>Какие цены помечены «косвенно» и откуда они взялись?</li></ul></div></li>
@@ -724,7 +724,7 @@ footer a{color:#dfe6ff}
         <li><div class="step-top"><input class="chk" type="checkbox" id="s3-5" aria-label="Шаг выполнен"><span class="sn"></span><h4>Версия 3 — ярлыки <span class="opt">по желанию</span></h4></div>
           <div class="step-body"><p>Создайте в Gmail ярлыки «🔴 Срочно», «🟡 Ответить», «🔵 Прочитать» и переключите изменение ярлыков на <b>Needs approval</b>. Затем в той же задаче:</p>
           <div class="prompt"><div class="prompt-head"><span>Промпт</span><button class="copy" type="button" data-copy="labels">Скопировать</button></div><pre data-prompt="labels"></pre></div>
-          <div class="host-note"><span class="label">Для ведущего</span>Попросите каждого найти письмо, которое агент отнёс не туда, и сформулировать правило. Соберите правила группы в чате — получится заготовка скилла. Отдельно покажите: агент пытается отправить письмо, Blocked срабатывает, и это правильно.</div></div></li>
+          <div class="host-note"><span class="label">Для ведущего</span>Попросите каждого найти письмо, которое агент отнёс не туда, и сформулировать правило. Соберите эти правила вместе — получится заготовка скилла. Отдельно покажите: агент пытается отправить письмо, Blocked срабатывает, и это правильно.</div></div></li>
       </ol>
       <details class="trouble"><summary>Если что-то пошло не так</summary><dl>
         <dt>Claude спрашивает разрешение на каждое чтение, и это надоело</dt><dd>Проверьте, что у чтения стоит Always allow, и переключите задачу в режим Auto — отправка всё равно Blocked</dd>
@@ -880,30 +880,11 @@ footer a{color:#dfe6ff}
 <section class="block alt" id="homework">
   <div class="wrap">
     <div class="sec-head">
-      <p class="eyebrow">Что в фокусе на этой неделе</p>
-      <h2>Домашнее задание</h2>
+      <p class="eyebrow">Для своей задачи</p>
+      <h2>Карточка агента</h2>
+      <p>Если на какой-то вопрос нет ответа — делать агента для этой задачи пока рано.</p>
     </div>
     <div class="hw">
-      <div class="focus">
-        <div class="stack">
-          <h3>Для всех</h3>
-          <ul class="checklist">
-            <li><input class="chk" type="checkbox" id="hw-1"><label for="hw-1">Ступень 2: досье на одну компанию — найдите в журнале момент, где агент переформулировал запрос</label></li>
-            <li><input class="chk" type="checkbox" id="hw-2"><label for="hw-2">Ступень 3: секретарь почты, версии 1 и 2 — посчитайте, сколько черновиков ушло без правок</label></li>
-            <li><input class="chk" type="checkbox" id="hw-3"><label for="hw-3">Ступень 4: бриф по расписанию — проживите с ним три утра</label></li>
-            <li><input class="chk" type="checkbox" id="hw-4"><label for="hw-4">Записать: что работало, что нет, где агент «терялся»</label></li>
-          </ul>
-        </div>
-        <div class="stack">
-          <h3>Кто хочет больше</h3>
-          <ul class="checklist">
-            <li><input class="chk" type="checkbox" id="hw-5"><label for="hw-5">Ступень 5: скилл для брифа через skill-creator</label></li>
-            <li><input class="chk" type="checkbox" id="hw-6"><label for="hw-6">Ступень 6: команда агентов на своей теме</label></li>
-            <li><input class="chk" type="checkbox" id="hw-7"><label for="hw-7">Заполнить карточку агента для одной своей задачи — справа</label></li>
-          </ul>
-        </div>
-        <p class="muted" style="font-size:14px">Если на какой-то вопрос карточки нет ответа — делать агента для этой задачи пока рано.</p>
-      </div>
       <div class="card builder">
         <div class="stack" style="gap:6px"><span class="label">Карточка агента</span><p class="example-flag" id="card-flag">Для примера заполнено «Разбор откликов на HH» — перепишите своей задачей.</p></div>
         <div class="grid">
@@ -1110,14 +1091,14 @@ var DIAG = {
     + '</svg></div><figcaption>Роли общаются только через файлы. Цикл «автор ⇄ критик» ограничен тремя кругами — иначе команда может крутиться бесконечно.</figcaption></figure>'
 };
 var RUNGS = [
-  {n:1, name:"Монитор лайков в Twitter", tag:"демо", idea:"агент действует в браузере",
-   quote:"Разбери мои лайки в Twitter: что там полезного и что из этого применить",
-   does:["авторизуется в вашем браузере и заходит в Twitter","читает лайки и переходит по ссылкам из постов","натыкается на пейволл → пробует обойти → находит решение","обрабатывает посты параллельно","создаёт файл: кластеры инсайтов и идеи для применения"],
-   lesson:"Агент не отвечает, а действует: управляет браузером, читает статьи с вашей подпиской и создаёт файл на вашем компьютере.",
+  {n:1, name:"Сводка по портфелю", tag:"демо", idea:"агент действует в ваших системах",
+   quote:"Собери из квартальных отчётов портфельных компаний одну страницу: где мы выше плана, где ниже и почему",
+   does:["открывает папку с отчётами активов за квартал","читает каждый отчёт и вытаскивает ключевые показатели","сверяет с бюджетом и прошлым кварталом, отмечает отклонения","там, где цифр не хватает, идёт в пресс-релизы и раскрытие информации","создаёт файл: одна страница по портфелю и красные флаги по каждому активу"],
+   lesson:"Агент не отвечает, а действует: сам открывает документы, сверяет цифры и создаёт готовый файл.",
    chat:"Чат отвечает текстом из памяти модели. Агент сам идёт туда, где лежат ваши данные, и приносит готовый результат.",
-   aut:3, autWhy:"работает сам внутри задачи. Но он залогинен в ваш аккаунт — значит, мог бы и лайкнуть, и написать. Запреты задавайте явно.",
-   profile:[5,2,3,3,2], diagram:null, practicum:null,
-   task:"Задание бета-тестерам: что здесь делает агент, чего не может обычный чат? Где вы видите риски и слабые места?"},
+   aut:3, autWhy:"работает сам внутри задачи, но только читает документы и пишет сводку вам. Доступ — к одной папке с отчётами, не ко всему диску.",
+   profile:[3,2,3,3,2], diagram:null, practicum:null,
+   task:"Что здесь делает агент, чего не может обычный чат? Где риски и слабые места?"},
   {n:2, name:"Исследователь конкурента", idea:"петля",
    quote:"Найди всё про компанию X: продукт, цены, новости за полгода, отзывы",
    does:["составляет план: четыре раздела досье","ищет, читает, заполняет раздел за разделом","замечает: «про цены пусто — на сайте только кнопка „запросить демо“»","переформулирует: другие слова, английский, другие источники — закупки, вакансии, отзывы","после трёх пустых попыток честно пишет «не найдено» и где искал"],
@@ -1150,7 +1131,7 @@ var RUNGS = [
    lesson:"Методология в файле → предсказуемость. LLM недетерминирована; скилл делает результат одинаковым от раза к разу.",
    chat:"Промпт живёт в одном разговоре. Скилл — во всех задачах, где он нужен, включая задачи по расписанию.",
    aut:null, autWhy:"не меняется: скилл отвечает за качество и стабильность, а не за свободу.",
-   example:"<b>Пример из урока.</b> Наталья Рейслер разбирает 50 откликов на HH. У неё есть критерии, red flags, понимание, что важно для вакансии. Без скилла агент рассортирует резюме по формальным признакам. Со скиллом — будет оценивать как Наталья. Экспертиза одна, масштаб — 50 резюме вместо 10.",
+   example:"<b>Пример из жизни холдинга.</b> Инвестиционный комитет оценивает проекты по своим критериям: рынок, команда, юнит-экономика, риски, red flags. Без скилла агент оценит проект по формальным признакам. Со скиллом, в который упакованы критерии комитета, — так, как оценивает комитет. Экспертиза одна, масштаб — 50 проектов вместо 10.",
    profile:null, diagram:null, practicum:5,
    guard:"скилл — это ваш стандарт; без примера хорошего результата он работает хуже."},
   {n:6, name:"Команда агентов", star:true, idea:"роли и передача работы",
@@ -1192,7 +1173,7 @@ function selectRung(i, focus){
   h += "<div class=\"two\"><div class=\"stack\"><span class=\"label\">Что делает агент</span><ul class=\"clean\">" + r.does.map(function(d){ return "<li>" + esc(d) + "</li>"; }).join("") + "</ul></div>";
   h += "<div class=\"stack\"><div class=\"callout key\"><b>Урок</b><p>" + esc(r.lesson) + "</p></div><div class=\"stack\" style=\"gap:6px\"><span class=\"label\">" + (r.n === 6 ? "Чем отличается от одного агента" : "Чем отличается от чата") + "</span><p>" + esc(r.chat) + "</p></div></div></div>";
   if (r.rule) h += "<div class=\"callout\"><b>Главное правило агента по расписанию</b><p>" + esc(r.rule) + "</p></div>";
-  if (r.task) h += "<div class=\"callout\"><b>Вопрос группе</b><p>" + esc(r.task) + "</p></div>";
+  if (r.task) h += "<div class=\"callout\"><b>Вопрос для обсуждения</b><p>" + esc(r.task) + "</p></div>";
   if (r.diagram) h += DIAG[r.diagram];
   h += "<div class=\"two two-prof\"><div class=\"stack\"><span class=\"label\">Автономия</span>";
   if (r.aut) h += "<p class=\"aut-badge\"><b>" + r.aut + "</b><span>из 5</span></p>";
