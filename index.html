@@ -602,7 +602,7 @@ footer a{color:#dfe6ff}
     <div class="sec-head">
       <p class="eyebrow">Делаем вместе</p>
       <h2>Практикум по шагам</h2>
-      <p>Ведущий показывает на своём экране, группа повторяет. На каждом чекпоинте ждём, пока получится у всех. Промпты собираются из полей над ними — поменяйте компанию, темы или формат, и текст обновится. Отметки шагов сохраняются в этом браузере.</p>
+      <p>Каждого агента собираем по шагам: сначала ведущий показывает на живом примере, затем повторяете вы. Чекпоинты подсказывают, что должно получиться к концу шага. Промпты собираются из полей над ними — поменяйте компанию, темы или формат, и текст обновится. Отметки шагов сохраняются в этом браузере.</p>
     </div>
     <div class="tabs" role="tablist" aria-label="Ступени практикума" id="tabs">
       <button class="tab" role="tab" id="tab-0" aria-controls="p0" aria-selected="true" data-tab="0"><span class="tn">0 · Подготовка</span><span class="tc" data-count="0"></span></button>
@@ -677,7 +677,7 @@ footer a{color:#dfe6ff}
         <li><div class="step-top"><input class="chk" type="checkbox" id="s2-3" aria-label="Шаг выполнен"><span class="sn"></span><h4>Следите за петлёй</h4></div>
           <div class="step-body"><p>Агент работает 5–15 минут. Смотрите на ход работы: план → поиск → чтение → «по ценам мало данных» → новый запрос. Всё это же записывается в <span class="path">журнал.md</span>.</p>
           <div class="checkpoint"><span class="cp">Чекпоинт</span><span>В журнале не меньше 8 шагов и хотя бы одна переформулировка. Найдите её: какой был первый запрос, какой второй, что сработало.</span></div>
-          <div class="host-note"><span class="label">Для ведущего</span>Покажите момент переформулировки в журнале — это и есть петля. Спросите группу: сколько раз за неделю вы сами переспрашиваете модель «а поищи ещё»? Это та же петля, только её крутите вы.</div></div></li>
+          <div class="host-note"><span class="label">Для ведущего</span>Покажите момент переформулировки в журнале — это и есть петля. Спросите: сколько раз за неделю ваши аналитики переспрашивают модель «а поищи ещё»? Это та же петля, только её крутите вы.</div></div></li>
         <li><div class="step-top"><input class="chk" type="checkbox" id="s2-4" aria-label="Шаг выполнен"><span class="sn"></span><h4>Проверьте результат</h4></div>
           <div class="step-body"><ul class="clean"><li>Откройте три случайные ссылки из досье: совпадают ли факты с источником?</li><li>Есть ли раздел «Чего не удалось найти»? Хорошо, если есть: честный пробел лучше выдумки</li><li>Какие цены помечены «косвенно» и откуда они взялись?</li></ul></div></li>
         <li><div class="step-top"><input class="chk" type="checkbox" id="s2-5" aria-label="Шаг выполнен"><span class="sn"></span><h4>Включите самопроверку <span class="opt">по желанию</span></h4></div>
@@ -842,7 +842,7 @@ footer a{color:#dfe6ff}
         <li><div class="step-top"><input class="chk" type="checkbox" id="s6-4" aria-label="Шаг выполнен"><span class="sn"></span><h4>Разберите, что произошло</h4></div>
           <div class="step-body"><ul class="clean"><li>Сколько было кругов?</li><li>Что критик нашёл в первой версии? Откройте <span class="path">03_ревью_1.md</span></li><li>Сравните первый черновик и итог</li><li>Были ли у автора запросы к исследователю?</li></ul>
           <div class="checkpoint"><span class="cp">Чекпоинт</span><span>В первом ревью есть хотя бы один ❌. Если критик сразу всё принял — чеклист слишком мягкий: ужесточите его и запустите снова.</span></div>
-          <div class="host-note"><span class="label">Для ведущего</span>Покажите первое ревью и спросите группу: кто из вас пропустил бы то, что нашёл критик? Затем покажите чеклист: качество команды задаёт не модель, а тот, кто написал чеклист.</div></div></li>
+          <div class="host-note"><span class="label">Для ведущего</span>Покажите первое ревью и спросите: пропустил бы это ваш аналитик или референт? Затем покажите чеклист: качество команды задаёт не модель, а тот, кто написал чеклист.</div></div></li>
       </ol>
       <details class="trouble"><summary>Если что-то пошло не так</summary><dl>
         <dt>Критик всегда пишет «ПРИНЯТО»</dt><dd>Пункты чеклиста непроверяемые: нужны числа, запреты и цитаты</dd>
@@ -886,7 +886,7 @@ footer a{color:#dfe6ff}
     </div>
     <div class="hw">
       <div class="card builder">
-        <div class="stack" style="gap:6px"><span class="label">Карточка агента</span><p class="example-flag" id="card-flag">Для примера заполнено «Разбор откликов на HH» — перепишите своей задачей.</p></div>
+        <div class="stack" style="gap:6px"><span class="label">Карточка агента</span><p class="example-flag" id="card-flag">Для примера заполнено «Скрининг проектов для инвесткомитета» — перепишите своей задачей.</p></div>
         <div class="grid">
           <div class="field"><label for="c-name">Агент</label><input id="c-name" data-card="name"></div>
           <div class="field"><label for="c-trigger">Триггер</label><select id="c-trigger" data-card="trigger"><option>мой запрос</option><option>расписание</option><option>событие</option></select></div>
@@ -1215,15 +1215,15 @@ if (!FORMATS[S.format]) S.format = "memo";
 function saveInputs(){ store.set("aw5.inputs.v2", S); }
 
 var CARD_EXAMPLE = {
-  name:"Разборщик откликов", what:"оценивает отклики на вакансию по моим критериям и готовит шорт-лист",
-  who:"для меня как нанимающего менеджера: 50 резюме в неделю, по 5 минут на каждое",
-  llm:"сравнивает опыт с требованиями, замечает red flags", tools:"читает резюме из папки с выгрузкой HH, пишет таблицу",
-  loop:"резюме за резюме до конца папки; спорные — в отдельный список", goal:"таблица «да / нет / обсудить» с причиной в одну строку",
-  trigger:"мой запрос", aut:"2", autWhy:"решение о приглашении принимаю я",
-  allow:"чтение папки с резюме", approval:"—", blocked:"письма кандидатам",
-  lost:"нестандартные резюме, PDF-сканы", check:"сверю 5 случайных оценок со своими"
+  name:"Скрининг проектов для инвесткомитета", what:"оценивает входящие инвестиционные проекты по критериям комитета и готовит шорт-лист",
+  who:"для инвестиционной команды: десятки проектов в месяц, на первичный разбор каждого уходят часы",
+  llm:"сопоставляет проект с критериями комитета, замечает red flags", tools:"читает материалы проектов из папки, ищет данные о компании в открытых источниках, пишет таблицу",
+  loop:"проект за проектом до конца папки; спорные — в отдельный список", goal:"таблица «рассмотреть / отклонить / запросить данные» с причиной в одну строку",
+  trigger:"мой запрос", aut:"2", autWhy:"решение о рассмотрении принимает комитет",
+  allow:"чтение папки с проектами, поиск в интернете", approval:"—", blocked:"письма инициаторам проектов",
+  lost:"проекты без финансовой модели, сканы вместо документов", check:"сверю 5 случайных оценок с решениями комитета"
 };
-var CARD = Object.assign(clone(CARD_EXAMPLE), store.get("aw5.card", {}));
+var CARD = Object.assign(clone(CARD_EXAMPLE), store.get("aw5.card.v2", {}));
 
 var PROMPTS = {
   researcher: function(s){
@@ -1345,11 +1345,11 @@ $("#reset-inputs").addEventListener("click", function(){ S = clone(DEFAULTS); sa
 function fillCard(){ $$("[data-card]").forEach(function(el){ el.value = CARD[el.getAttribute("data-card")] || ""; }); }
 $$("[data-card]").forEach(function(el){
   var ev = el.tagName === "SELECT" ? "change" : "input";
-  el.addEventListener(ev, function(){ CARD[el.getAttribute("data-card")] = el.value; store.set("aw5.card", CARD); $("#card-flag").hidden = true; renderPrompts(); });
+  el.addEventListener(ev, function(){ CARD[el.getAttribute("data-card")] = el.value; store.set("aw5.card.v2", CARD); $("#card-flag").hidden = true; renderPrompts(); });
 });
-$("#card-clear").addEventListener("click", function(){ Object.keys(CARD).forEach(function(k){ CARD[k] = ""; }); CARD.trigger = "мой запрос"; CARD.aut = "2"; store.set("aw5.card", CARD); fillCard(); $("#card-flag").hidden = true; renderPrompts(); var f = $("#c-name"); if (f) f.focus(); });
-$("#card-example").addEventListener("click", function(){ CARD = clone(CARD_EXAMPLE); store.set("aw5.card", CARD); fillCard(); $("#card-flag").hidden = false; renderPrompts(); });
-if (store.get("aw5.card", null)) $("#card-flag").hidden = true;
+$("#card-clear").addEventListener("click", function(){ Object.keys(CARD).forEach(function(k){ CARD[k] = ""; }); CARD.trigger = "мой запрос"; CARD.aut = "2"; store.set("aw5.card.v2", CARD); fillCard(); $("#card-flag").hidden = true; renderPrompts(); var f = $("#c-name"); if (f) f.focus(); });
+$("#card-example").addEventListener("click", function(){ CARD = clone(CARD_EXAMPLE); store.set("aw5.card.v2", CARD); fillCard(); $("#card-flag").hidden = false; renderPrompts(); });
+if (store.get("aw5.card.v2", null)) $("#card-flag").hidden = true;
 
 /* copy */
 document.addEventListener("click", function(e){
