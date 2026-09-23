@@ -132,6 +132,13 @@ ul.clean li::marker{color:var(--accent)}
 .news p.muted{font-size:15px}
 @media (max-width:760px){.news{grid-template-columns:minmax(0,1fr);gap:12px;padding:22px}}
 
+.newsgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.nitem{display:grid;gap:10px;align-content:start}
+.nitem h3{font:500 17px/1.35 var(--body)}
+.nitem p{font-size:14.5px;color:var(--ink-2)}
+.nitem a{font-size:13.5px;text-decoration:none}
+@media (max-width:1000px){.newsgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.newsgrid{grid-template-columns:minmax(0,1fr)}}
 /* formula */
 .elements{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
 .el{display:grid;gap:12px;align-content:start}
@@ -373,6 +380,7 @@ footer a{color:#dfe6ff}
       <b>AI Native index</b><span>неделя 5</span>
     </a>
     <nav class="nav" aria-label="Разделы">
+      <a href="#news">Новости</a>
       <a href="#formula">Формула</a>
       <a href="#autonomy">Автономия</a>
       <a href="#ladder">Лестница</a>
@@ -407,28 +415,22 @@ footer a{color:#dfe6ff}
   </div>
 </section>
 
-<section class="block" id="learned">
+<section class="block" id="news">
   <div class="wrap">
     <div class="sec-head">
-      <p class="eyebrow">Где мы сейчас</p>
-      <h2>Что мы уже изучили</h2>
+      <p class="eyebrow">Сентябрь 2026</p>
+      <h2>Что произошло за месяц</h2>
+      <p>Главное: индустрия перешла от AI-собеседника к AI-исполнителю. Агенты получают доступ к почте, календарю и компьютеру — и вопрос прав и контроля становится главным.</p>
     </div>
-    <div class="weeks">
-      <div class="week"><span class="n">Неделя 1</span><h3>AI Native Mindset, карта задач, L0–L4</h3><span class="lvl">L1</span></div>
-      <div class="week"><span class="n">Неделя 2</span><h3>Reasoning, промптинг, пять типов мышления</h3><span class="lvl">L1–L2</span></div>
-      <div class="week"><span class="n">Неделя 3</span><h3>Контекст, Projects, Memory, MCP</h3><span class="lvl">L2</span></div>
-      <div class="week"><span class="n">Неделя 4</span><h3>Исследования, анализ данных, интерпретация</h3><span class="lvl">L2</span></div>
-      <div class="week now"><span class="n">Неделя 5 · сейчас</span><h3>Агенты, делегирование, скиллы</h3><span class="lvl">L2 → L3 и L4</span></div>
-    </div>
-    <div class="news">
-      <div class="stack">
-        <p class="eyebrow">Что произошло, пока мы не виделись</p>
-        <p class="big">Индустрия переходит от AI-собеседника к AI-исполнителю.</p>
-      </div>
-      <div class="stack">
-        <p class="muted">Параллельно Manus докручивает своего Agent in Telegram, а OpenClaw продолжает набирать обороты и набивать шишки. Отсюда дисклеймер: многие решения ещё требуют тестирования и отладки.</p>
-        <p><a href="https://deploy-timeline-two.vercel.app/calendar.html" target="_blank" rel="noopener">Таймлайн новостей →</a></p>
-      </div>
+    <div class="newsgrid">
+      <article class="card nitem"><span class="label">16 сентября · Anthropic</span><h3>Claude Cowork и чат стали одним приложением</h3><p>Задачу можно передать и закрыть ноутбук — Claude доделает в облаке. Появились Claude Docs и Slides, память у чата и Cowork теперь общая.</p><a href="https://claude.com/blog/cowork-is-now-claude" target="_blank" rel="noopener">claude.com →</a></article>
+      <article class="card nitem"><span class="label">8 сентября · Meta</span><h3>Muse — персональный агент для всех</h3><p>Выполняет поручения, ведёт расписание и многошаговые задачи в цифровой жизни пользователя. Гонка потребительских агентов стартовала.</p><a href="https://www.axios.com/2026/09/20/ai-assistant-openai-meta-muse-instinct-grok-apple" target="_blank" rel="noopener">Axios →</a></article>
+      <article class="card nitem"><span class="label">14 сентября · OpenAI</span><h3>ChatGPT переходит на GPT-6 Astra</h3><p>Упор на computer use: модель позиционируют как автономного «цифрового сотрудника». OpenAI также наняла создателя OpenClaw делать персональных агентов.</p><a href="https://en.wikipedia.org/wiki/ChatGPT" target="_blank" rel="noopener">Wikipedia →</a></article>
+      <article class="card nitem"><span class="label">16 сентября · Salesforce</span><h3>AIforce: CRM открывается внешним агентам</h3><p>Данные, процессы и правила Salesforce доступны агентам в других интерфейсах. Параллельно с Anthropic запущен Claudeforce — Salesforce внутри Claude.</p><a href="https://www.salesforce.com/news/press-releases/2026/08/26/salesforce-and-anthropic-announce-claudeforce/" target="_blank" rel="noopener">Salesforce →</a></article>
+      <article class="card nitem"><span class="label">30 сентября · Docusign</span><h3>MCP-сервер открыт для всех агентов</h3><p>Подписание договоров становится инструментом, который агент может вызвать сам. MCP — тот самый стандарт из раздела про Tools.</p><a href="https://aiagentstore.ai/ai-agent-news/2026-september" target="_blank" rel="noopener">AI Agent Store →</a></article>
+      <article class="card nitem"><span class="label">18 сентября · Anthropic</span><h3>Claude помогает строить следующую версию себя</h3><p>По словам компании, к августу Claude вёл около четверти исследовательской работы — в феврале такой доли не было вовсе.</p><a href="https://spectrumlocalnews.com/us/snplus/business/2026/09/18/anthropic-claude-helping-to-build-next-version" target="_blank" rel="noopener">Spectrum News →</a></article>
+      <article class="card nitem"><span class="label">Сентябрь · Manus и OpenClaw</span><h3>Десктоп-агенты: гонка и шишки</h3><p>Manus выпустил «My Computer» — агента, работающего на вашем компьютере. OpenClaw выпустил три релиза за пять дней, почти все — про безопасность и защиту доступов.</p><a href="https://blog.mean.ceo/openclaw-news-september-2026/" target="_blank" rel="noopener">Mean CEO →</a></article>
+      <article class="card nitem"><span class="label">22 сентября · исследование</span><h3>Агентов много, контроля мало</h3><p>96% организаций уже держат агентов в продакшене, но у двух третей за год были операционные последствия из-за действий агента.</p><a href="https://www.globenewswire.com/news-release/2026/09/22/3366611/0/en/the-ai-agent-management-gap-is-growing.html" target="_blank" rel="noopener">GlobeNewswire →</a></article>
     </div>
   </div>
 </section>
