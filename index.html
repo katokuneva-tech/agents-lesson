@@ -254,6 +254,9 @@ figure.dg figcaption{margin-top:10px;font-size:13.5px;color:var(--mute)}
 .steps3 span{padding:6px 10px;border:1px solid var(--line-strong);border-radius:2px}
 .steps3 i{font-style:normal;color:var(--mute)}
 
+.diff{display:grid;gap:8px;padding:16px 18px;background:var(--accent-soft);border-left:3px solid var(--accent);border-radius:0 var(--radius) var(--radius) 0}
+.diff .label{color:var(--accent)}
+.diff p{color:var(--ink);font-weight:500}
 /* pitfalls */
 .pits{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
 .pits .card{display:grid;gap:12px;align-content:start}
@@ -1171,7 +1174,7 @@ function selectRung(i, focus){
   var h = "";
   h += "<div class=\"detail-head\"><p class=\"eyebrow\">Ступень " + r.n + (r.star ? " · со звёздочкой" : "") + (r.tag ? " · " + esc(r.tag) : "") + "</p><h3>" + esc(r.name) + "</h3><p class=\"quote\">«" + esc(r.quote) + "»</p></div>";
   h += "<div class=\"two\"><div class=\"stack\"><span class=\"label\">Что делает агент</span><ul class=\"clean\">" + r.does.map(function(d){ return "<li>" + esc(d) + "</li>"; }).join("") + "</ul></div>";
-  h += "<div class=\"stack\"><div class=\"callout key\"><b>Урок</b><p>" + esc(r.lesson) + "</p></div><div class=\"stack\" style=\"gap:6px\"><span class=\"label\">" + (r.n === 6 ? "Чем отличается от одного агента" : "Чем отличается от чата") + "</span><p>" + esc(r.chat) + "</p></div></div></div>";
+  h += "<div class=\"stack\"><div class=\"callout key\"><b>Урок</b><p>" + esc(r.lesson) + "</p></div><div class=\"diff\"><span class=\"label\">" + (r.n === 6 ? "Чем отличается от одного агента" : "Чем отличается от чата") + "</span><p>" + esc(r.chat) + "</p></div></div></div>";
   if (r.rule) h += "<div class=\"callout\"><b>Главное правило агента по расписанию</b><p>" + esc(r.rule) + "</p></div>";
   if (r.task) h += "<div class=\"callout\"><b>Вопрос для обсуждения</b><p>" + esc(r.task) + "</p></div>";
   if (r.diagram) h += DIAG[r.diagram];
